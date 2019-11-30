@@ -58,10 +58,11 @@ const userUpdate = (req, res) => {
   } else if (!req.body) {
     res.status(400).send({message: 'Please add request body'});
   } else {
-    // Find user by id and update
+    // Find user b`y id and update
     User.findByIdAndUpdate(req.params.id, {
       firstName: req.body.firstName,
       lastName: req.body.lastName,
+      age: req.body.age,
     }, {new: true}).then((user)=>{
       res.send(user);
     }).catch((err)=>{

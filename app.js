@@ -1,5 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const cors = require('cors');
 
 // import routers
 const usersRouter = require('./routes/users');
@@ -18,7 +19,7 @@ mongoose.connect('mongodb://localhost', {useNewUrlParser: true, useUnifiedTopolo
 // Setting up request body parsor
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
-
+app.use(cors());
 
 // Add routes
 app.use('/', usersRouter);
