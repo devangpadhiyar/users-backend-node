@@ -8,8 +8,10 @@ const usersRouter = require('./routes/users');
 // Instantiate express application
 const app = express();
 
+const MONGODB_URL = process.env.MONGODB_URL ? process.env.MONGODB_URL :'mongodb://localhost';
+
 // Mongo DB connection
-mongoose.connect('mongodb://localhost', {useNewUrlParser: true, useUnifiedTopology: true}).then(() => {
+mongoose.connect(MONGODB_URL, {useNewUrlParser: true, useUnifiedTopology: true}).then(() => {
   console.log('Database connection successful');
 }).catch((err)=>{
   console.log('Databse connection failed', err);

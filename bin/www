@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 // Module requirements
-
+require('dotenv').config();
 const app = require('../app');
 const http = require('http');
 
