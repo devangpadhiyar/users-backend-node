@@ -63,11 +63,11 @@ const userUpdate = (req, res) => {
       firstName: req.body.firstName,
       lastName: req.body.lastName,
       age: req.body.age,
-    }, {new: true}).then((user)=>{
+    }, {new: true, runValidators: true}).then((user)=>{
       res.send(user);
     }).catch((err)=>{
       console.log(err);
-      res.status(404).send(err);
+      res.status(400).send(err);
     });
   }
 };
