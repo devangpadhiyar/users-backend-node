@@ -1,0 +1,25 @@
+{
+  "name": "users-backend",
+  "version": "1.0.0",
+  "description": "Test application CRUD operations",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./bin/www",
+    "dev": "nodemon --inspect ./bin/www"
+  },
+  "author": "Devang Padhiyar",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.7.13"
+  },
+  "devDependencies": {
+    "eslint": "^6.7.1",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.18.2",
+    "nodemon": "^2.0.1"
+  }
+}

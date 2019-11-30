@@ -1,0 +1,19 @@
+#!/usr/bin/env node
+
+// Module requirements
+
+var app = require('../app');
+var http = require('http');
+
+// Get port from environ or set default
+var port = process.env.PORT || 3000;
+app.set('port', port);
+
+// Create HTTP server
+var server = http.createServer(app);
+
+
+// Listen on port
+server.listen(port,()=>{
+  console.log(`Server started listening on ${port} port`);
+});
